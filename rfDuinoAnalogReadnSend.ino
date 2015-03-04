@@ -2,7 +2,7 @@
 Program Name: rfDuinoAnalogReadnSend
 Version: 3
 Arduino: rfDuino
-Last Update: Feb. 14, 2015
+Last Update: March 4, 2015
 ********************************/
 
 
@@ -32,7 +32,7 @@ char *charPtr1;
 char *charPtr2;
 char cmd;
 
-#define DURATION_microSec 3000
+#define DURATION_microSec 2620 // Sampling Rate of 360 Hz (1.20 * 2 * 150 Hz)
 
 
 
@@ -67,7 +67,7 @@ void loop() // run over and over
         delayMicroseconds(DURATION_microSec);
   }
   else if ((cmd == STOP) || (cmd == DISCONNECT)){
-        RFduino_systemReset();
+        //RFduino_systemReset();
   }
  
 }
